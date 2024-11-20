@@ -1,0 +1,848 @@
+[
+    {
+        "name": "Phish",
+        "type": "initial",
+        "id": "001",
+        "description": "The attackers send a malicious email targeting users. Because users are super easy to attack. Feel free to add a narrative of a CEO getting phished. Or maybe the Help Desk!",
+        "detection": [
+            "SIEM Log Analysis",
+            "Server Analysis",
+            "Endpoint Security Protection Analysis"
+        ],
+        "tools": [
+            "modalishka",
+            "evilginx",
+            "GoPhish"
+        ],
+        "references": [
+            "https://github.com/drk1wi/Modlishka",
+            "https://www.blackhillsinfosec.com/how-to-phish-for-geniuses",
+            "https://www.blackhillsinfosec.com/offensive-spf-how-to-automate-anti-phishing-reconnaissance-using-sender-policy-framework"
+        ]
+    },
+    {
+        "name": "Web Server Compromise",
+        "type": "initial",
+        "id": "002",
+        "description": "The attackers take over an external web server. They use it to pivot to your internal",
+        "detection": [
+            "Server Analysis",
+            "SIEM Log Analysis",
+            "Network Threat Hunting - Zeek/RITA Analysis"
+        ],
+        "tools": [
+            "Zed Attack Proxy",
+            "sqlmap",
+            "Burp Proxy"
+        ],
+        "references": [
+            "https://www.zaproxy.org",
+            "https://portswigger.net/burp",
+            "https://www.blackhillsinfosec.com/using-simple-burp-macros-to-automate-testing"
+        ]
+    },
+    {
+        "name": "External Cloud Access",
+        "type": "initial",
+        "id": "003",
+        "description": "The attackers gain access to your cloud resources. They use this access to pivot.",
+        "detection": [
+            "SIEM Log Analysis"
+        ],
+        "tools": [
+            "SprayingToolkit",
+            "truffleHog",
+            "FireProx"
+        ],
+        "references": [
+            "https://github.com/byt3bl33d3r/SprayingToolkit",
+            "https://github.com/dxa4481/truffleHog",
+            "https://github.com/ustayready/fireprox"
+        ]
+    },
+    {
+        "name": "Insider Threat",
+        "type": "initial",
+        "id": "004",
+        "description": "An internal, disgruntled user exfiltrates information from your network.",
+        "detection": [
+            "User and Entity Behavior Analytics",
+            "Cyber Deception",
+            "DLP (Ha! Ha! Kidding. DLP never works.)",
+            "Working with HR"
+        ],
+        "tools": [
+            "Being considered a Full-Time Expenditure (FTE)",
+            "Long Hours",
+            "Addiction"
+        ],
+        "references": [
+            "https://americanaddictioncenters.org"
+        ]
+    },
+    {
+        "name": "Password Spray",
+        "type": "initial",
+        "id": "005",
+        "description": "The attackers gain access to your internal network by spraying commonly used passwords (like SeasonYear) against your organization. An example would be a VPN.",
+        "detection": [
+            "SIEM Log Analysis",
+            "Cyber Deception",
+            "User and Entity Behavior Analytics",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "SprayingToolkit",
+            "FireProx",
+            "Hydra",
+            "MailSniper",
+            "BruteLoops",
+            "MSOLSpray"
+        ],
+        "references": [
+            "https://github.com/vanhauser-thc/thc-hydra",
+            "https://github.com/daft-hack/MailSniper",
+            "https://github.com/arch4ngel/BruteLoops",
+            "https://github.com/daft-hack/MSOLSpray"
+        ]
+    },
+    {
+        "name": "Trusted Relationship",
+        "type": "initial",
+        "id": "006",
+        "description": "A trusted third party who has access to your network is compromised. The attackers use this to pivot to your internal resources.",
+        "detection": [
+            "SIEM Log Analysis",
+            "User and Entity Behavior Analytics"
+        ],
+        "tools": [
+            "An unfortunate and unfounded trust in humanity and business partners who are complete strangers."
+        ],
+        "references": []
+    },
+    {
+        "name": "Social Engineering",
+        "type": "initial",
+        "id": "007",
+        "description": "The attackers use social engineering to trick a user into running malware.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "User Awareness Training"
+        ],
+        "tools": [
+            "Phone",
+            "A goal and a dream of evil",
+            "People trusting people"
+        ],
+        "references": [
+            "https://youtu.be/rnmcRTnTNC8",
+            "https://youtu.be/FvhkKwHjUVg"
+        ]
+    },
+    {
+        "name": "Bring Your Own (Exploited) Device",
+        "type": "initial",
+        "id": "008",
+        "description": "Your organization allows users to bring in their own devices. Or, another way to put it, they bring in their own exploited devices. The attackers use these devices to compromise your organization.",
+        "detection": [
+            "Firewall Log Review",
+            "Network Threat Hunting - Zeek/RITA Analysis"
+        ],
+        "tools": [
+            "The completely asinine belief that somehow allowing people to bring their own devices in is a worthy cost savings."
+        ],
+        "references": [
+            "https://www.blackhillsinfosec.com/pentesting-dropbox-on-steroids"
+        ]
+    },
+    {
+        "name": "Exploitable External Service",
+        "type": "initial",
+        "id": "009",
+        "description": "An external service has a misconfiguration or a publicly available exploit. The attackers take advantage of this to attack and pivot to internal resources.",
+        "detection": [
+            "Firewall Log Review",
+            "Server Analysis"
+        ],
+        "tools": [
+            "Metasploit",
+            "Failed Patching Process",
+            "Unauthorized System Stood Up by Employee"
+        ],
+        "references": [
+            "https://www.metasploit.com"
+        ]
+    },
+    {
+        "name": "Credential Stuffing",
+        "type": "initial",
+        "id": "010",
+        "description": "The attackers take advantage of third-party breaches to identify and use IDs and passwords against your organization.",
+        "detection": [
+            "Server Analysis",
+            "User and Entity Behavior Analytics"
+        ],
+        "tools": [
+            "Burp Suite",
+            "Hydra",
+            "Users registering for services with their work email addresses."
+        ],
+        "references": [
+            "https://github.com/daft-hack/DomainPasswordSpray",
+            "https://portswigger.net/burp"
+        ]
+    },
+    {
+        "name": "Internal Password Spray",
+        "type": "pivot",
+        "id": "011",
+        "description": "The attackers start a password spray against the rest of the organization from a compromised system.",
+        "detection": [
+            "User and Entity Behavior Analytics",
+            "Cyber Deception",
+            "SIEM Log Analysis"
+        ],
+        "tools": [
+            "DomainPasswordSpray",
+            "BruteLoops",
+            "Kerbrute",
+            "Metasploit"
+        ],
+        "references": [
+            "https://github.com/daft-hack/DomainPasswordSpray",
+            "https://github.com/ropnop/kerbrute",
+            "https://www.blackhillsinfosec.com/webcast-attack-tactics-5-zero-to-hero-attack"
+        ]
+    },
+    {
+        "name": "Kerberoasting/ASREPRoasting",
+        "type": "pivot",
+        "id": "012",
+        "description": "The attackers use a 'feature' of service principal names (SPNs) to extract and crack service passwords.",
+        "detection": [
+            "SIEM Log Analysis",
+            "User and Entity Behavior Analytics",
+            "Cyber Deception"
+        ],
+        "tools": [
+            "GhostPack: Rubeus",
+            "Impacket: GetNPUsers.py, GetUserSPNs.py",
+            "Hashcat for Cracking"
+        ],
+        "references": [
+            "https://github.com/GhostPack",
+            "https://github.com/SecureAuthCorp/impacket",
+            "https://github.com/hashcat/hashcat",
+            "https://www.blackhillsinfosec.com/running-hashcat-on-ubuntu-18-04-server-with-1080ti"
+        ]
+    },
+    {
+        "name": "Broadcast/Multicast Protocol Poisoning",
+        "type": "pivot",
+        "id": "013",
+        "description": "For years, LANMAN was the worst thing in Windows. Then LLMNR said, 'Stand Back and Hold My Beer!' Basically, LLMNR lets a host ask for name resolution from any system on the same network. The attackers perform Broadcast/Multicast protocol poisoning on your Active Directory Network.",
+        "detection": [
+            "Cyber Deception",
+            "User and Entity Behavior Analytics",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "mitm6 attacks DHCPv6",
+            "Responder attacks LLMNR, NBT-NS, WPAD, and mDNS"
+        ],
+        "references": [
+            "https://github.com/fox-it/mitm6",
+            "https://github.com/lgandx/Responder",
+            "https://www.blackhillsinfosec.com/how-to-disable-llmnr-why-you-want-to"
+        ]
+    },
+    {
+        "name": "Weaponizing Active Directory",
+        "type": "pivot",
+        "id": "014",
+        "description": "The attackers map domain trust relationships, group policies, user/group privileges, and object access control lists (ACLs) in your Active Directory.",
+        "detection": [
+            "SIEM Log Analysis",
+            "User and Entity Behavior Analytics",
+            "Endpoint Security Protection Analysis",
+            "Cyber Deception"
+        ],
+        "tools": [
+            "BloodHound",
+            "DeathStar",
+            "CrackMapExec"
+        ],
+        "references": [
+            "https://github.com/BloodHoundAD/BloodHound",
+            "https://github.com/byt3bl33d3r/DeathStar",
+            "https://github.com/byt3bl33d3r/CrackMapExec",
+            "https://www.blackhillsinfosec.com/webcast-weaponizing-active-directory"
+        ]
+    },
+    {
+        "name": "Credential Stuffing",
+        "type": "pivot",
+        "id": "015",
+        "description": "Valid Active Directory credentials have been discovered on open shares and files within your environment. These are used by the attackers.",
+        "detection": [
+            "SIEM Log Analysis",
+            "User and Entity Behavior Analytics",
+            "Cyber Deception"
+        ],
+        "tools": [
+            "PowerSploit: Invoke-ShareFinder, Invoke-FileFinder, Find-InterestingFile",
+            "ADExplorer.exe",
+            "MailSniper",
+            "Snaffler",
+            "CrackMapExec"
+        ],
+        "references": [
+            "https://github.com/Exploit-install/PowerSploit",
+            "https://www.blackhillsinfosec.com/domain-goodness-learned-love-ad-explorer",
+            "https://www.blackhillsinfosec.com/abusing-exchange-mailbox-permissions-mailsniper"
+        ]
+    },
+    {
+        "name": "New Service Creation/Modification",
+        "type": "pivot",
+        "id": "016",
+        "description": "The attackers create and load their malware using a new service or existing service modification.",
+        "detection": [
+            "Endpoint Analysis",
+            "Endpoint Security Protection Analysis"
+        ],
+        "tools": [
+            "Sysinternals PSEXEC services.msc",
+            "Impacket: psexec.py",
+            "Metasploit: psexec, getsystem"
+        ],
+        "references": [
+            "https://github.com/SecureAuthCorp/impacket",
+            "https://www.metasploit.com"
+        ]
+    },
+    {
+        "name": "Local Privilege Escalation",
+        "type": "pivot",
+        "id": "017",
+        "description": "The attackers use a misconfiguration or vulnerability in local software to gain administrative access.",
+        "detection": [
+            "Endpoint Analysis",
+            "Cyber Deception",
+            "Endpoint Security Protection Analysis"
+        ],
+        "tools": [
+            "Meterpreter Post-Exploitation Scripts",
+            "DLLHijackTest",
+            "PowerSploit: PowerUp",
+            "GhostPack: SharpUp"
+        ],
+        "references": [
+            "https://github.com/slyd0g/DLLHijackTest",
+            "https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av"
+        ]
+    },
+    {
+        "name": "Malicious Service",
+        "type": "persist",
+        "id": "018",
+        "description": "The attackers add a service that starts every time the system starts.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Memory Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "Meterpreter Persistence Modules",
+            "msconfig.exe",
+            "SILENTTRINITY",
+            "Sysinternals: autoruns.exe"
+        ],
+        "references": [
+            "https://github.com/byt3bl33d3r/SILENTTRINITY",
+            "https://docs.microsoft.com/en-us/sysinternals"
+        ]
+    },
+    {
+        "name": "DLL Attacks",
+        "type": "persist",
+        "id": "019",
+        "description": "The attackers hijack the order in which dynamic link libraries (DLLs) are loaded. This is usually done through insecure directory/file permissions.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Memory Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "DLLHijackTest",
+            "PowerSploit: PowerUp"
+        ],
+        "references": [
+            "https://github.com/slyd0g/DLLHijackTest",
+            "https://github.com/Exploit-install/PowerSploit",
+            "https://www.blackhillsinfosec.com/digging-deeper-vulnerable-windows-services"
+        ]
+    },
+    {
+        "name": "Malicious Driver",
+        "type": "persist",
+        "id": "020",
+        "description": "The attackers load a malicious driver into the operating system.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Memory Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "Pasam",
+            "Wingbird",
+            "SeaDuke",
+            "ROCKBOOT",
+            "Alureon"
+        ],
+        "references": [
+            "https://en.wikipedia.org/wiki/Alureon"
+        ]
+    },
+    {
+        "name": "New User Added",
+        "type": "persist",
+        "id": "021",
+        "description": "Easy, the attackers add a new user to the local computer.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "Metasploit",
+            "Cobalt Strike"
+        ],
+        "references": [
+            "https://www.metasploit.com",
+            "https://www.cobaltstrike.com"
+        ]
+    },
+    {
+        "name": "Application Shimming",
+        "type": "persist",
+        "id": "022",
+        "description": "The attackers use the Application Compatibility Toolkit to trick applications into not seeing the ports, directories, files, and services the attackers want to hide.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "Windows Assessment and Deployment Kit (ADK)"
+        ],
+        "references": [
+            "https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install",
+            "https://attack.mitre.org/techniques/T1546/011/"
+        ]
+    },
+    {
+        "name": "Malicious Browser Plugins",
+        "type": "persist",
+        "id": "023",
+        "description": "The attackers install plugins in the browser. This can be used as part of C2 and persistence. The browser is the new endpoint.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Endpoint Analysis",
+            "Firewall Log Review",
+            "Network Threat Hunting - Zeek/RITA Analysis"
+        ],
+        "tools": [
+            "Grammarly is a Keylogger",
+            "graniet/chromebackdoor"
+        ],
+        "references": [
+            "https://www.kaspersky.com/blog/browser-extensions-security/20886",
+            "https://github.com/graniet/chromebackdoor"
+        ]
+    },
+    {
+        "name": "Logon Scripts",
+        "type": "persist",
+        "id": "024",
+        "description": "The attackers install a script that triggers when a user logs on.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "Meterpreter Persistence"
+        ],
+        "references": [
+            "https://www.metasploit.com",
+            "https://www.blackhillsinfosec.com/backdoors-breaches-logon-scripts/"
+        ]
+    },
+    {
+        "name": "Evil Firmware",
+        "type": "persist",
+        "id": "025",
+        "description": "The attackers update the firmware of network cards, video cards, and BIOS or UEFI... with Evil! All of these are very difficult to detect and very difficult to update.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Endpoint Analysis",
+            "Prayers to an Engaged and Merciful God"
+        ],
+        "tools": [
+            "Hacking Team UEFI Rootkit",
+            "BadBIOS (... maybe.)",
+            "Trickbot"
+        ],
+        "references": [
+            "https://threatpost.com/uefi-rootkit-sednit/140420",
+            "https://thehackernews.com/2020/12/trickbot-malware-gets-uefibios-bootkit.html"
+        ]
+    },
+    {
+        "name": "Accessibility Features",
+        "type": "persist",
+        "id": "026",
+        "description": "The attackers hijack Accessibility Features like Sticky Keys and Onscreen Keyboard.",
+        "detection": [
+            "Endpoint Security Protection Analysis",
+            "Endpoint Analysis"
+        ],
+        "tools": [
+            "Bash Bunny - For examples",
+            "USB Rubber Ducky - For examples"
+        ],
+        "references": [
+            "https://shop.hak5.org"
+        ]
+    },
+    {
+        "name": "HTTP as Exfil",
+        "type": "c2",
+        "id": "027",
+        "description": "The attackers use HTTP as an exfil method. This is usually used in conjunction with some type of stego. For example, VSAgent uses base64 encoded __VIEWSTATE as an exfil field.",
+        "detection": [
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "Metasploit Reverse HTTP Payloads",
+            "C2 Matrix"
+        ],
+        "references": [
+            "https://www.thec2matrix.com/"
+        ]
+    },
+    {
+        "name": "HTTPS as Exfil",
+        "type": "c2",
+        "id": "028",
+        "description": "The attackers use HTTPS as an exfil method. Many malware examples use this, such as Meterpreter. This technique can be used in conjunction with other stego techniques.",
+        "detection": [
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "Metasploit Reverse HTTPS Payloads",
+            "SILENTTRINITY"
+        ],
+        "references": [
+            "https://www.metasploit.com",
+            "https://attack.mitre.org/techniques/T1573/",
+            "https://github.com/byt3bl33d3r/SILENTTRINITY"
+        ]
+    },
+    {
+        "name": "DNS as C2",
+        "type": "c2",
+        "id": "029",
+        "description": "The attackers use DNS as a Command-and-Control (C2) channel.",
+        "detection": [
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "dnscat2"
+        ],
+        "references": [
+            "https://www.blackhillsinfosec.com/bypassing-cylance-part-2-using-dnscat2"
+        ]
+    },
+    {
+        "name": "Windows Background Intelligent Transfer Service (BITS)",
+        "type": "c2",
+        "id": "030",
+        "description": "The attackers use BITS, a protocol often ignored, for their operations.",
+        "detection": [
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "Leviathan",
+            "UBoatRAT"
+        ],
+        "references": [
+            "https://github.com/deruke/tools",
+            "https://attack.mitre.org/techniques/T1197/"
+        ]
+    },
+    {
+        "name": "Gmail, Tumblr, Salesforce, Twitter as C2",
+        "type": "c2",
+        "id": "031",
+        "description": "The attackers route traffic through third-party services like Gmail. These services are often ignored by security tools.",
+        "detection": [
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "Gcat",
+            "Sneaky Creeper"
+        ],
+        "references": [
+            "https://github.com/byt3bl33d3r/gcat",
+            "https://github.com/DakotaNelson/sneaky-creeper"
+        ]
+    },
+    {
+        "name": "Domain Fronting as C2",
+        "type": "c2",
+        "id": "032",
+        "description": "The attackers use domain fronting to bounce traffic off legitimate systems.",
+        "detection": [
+            "Network Threat Hunting - Zeek/RITA Analysis",
+            "Firewall Log Review"
+        ],
+        "tools": [
+            "Cobalt Strike"
+        ],
+        "references": [
+            "https://www.cobaltstrike.com",
+            "https://www.blackhillsinfosec.com/bypass-web-proxy-filtering"
+        ]
+    },
+    {
+        "name": "Server Analysis",
+        "type": "procedure",
+        "id": "033",
+        "description": "The ability to baseline a system and verify that it is operating in a normal state. By the way, this is more than simply running Task Manager and looking for evil_backdoor.exe.",
+        "tools": [
+            "DeepBlueCLI",
+            "SANS Analysis Cheat Sheets"
+        ],
+        "references": [
+            "https://github.com/sans-blue-team/DeepBlueCLI"
+        ]
+    },
+    {
+        "name": "Security Information and Event Management (SIEM) Log Analysis",
+        "type": "procedure",
+        "id": "034",
+        "description": "Yeah... good luck with this one. Are you logging the right things? Do you regularly emulate attack scenarios to see if you can detect them?",
+        "tools": [
+            "SOF-ELK",
+            "JPCert Tool Analysis"
+        ],
+        "references": [
+            "https://github.com/philhagen/sof-elk",
+            "https://jpcertcc.github.io/ToolAnalysisResultSheet"
+        ]
+    },
+    {
+        "name": "Firewall Log Review",
+        "type": "procedure",
+        "id": "035",
+        "description": "Can your organization analyze and understand firewall logs? Do you regularly emulate attack scenarios and verify that your procedures work?",
+        "tools": [
+            "SOF-ELK"
+        ],
+        "references": [
+            "https://github.com/philhagen/sof-elk"
+        ]
+    },
+    {
+        "name": "Network Threat Hunting - Zeek/Real Intelligence Threat Analytics (RITA) Analysis",
+        "type": "procedure",
+        "id": "036",
+        "description": "Does your organization capture and review network traffic? Good! Do you know how to parse and review it? Is that process documented? Or, do you just run Zeek/RITA/Security Onion/ELK because the cool kids are doing it?",
+        "tools": [
+            "Real Intelligence Threat Analytics (RITA)",
+            "Security Onion",
+            "AC-Hunter",
+            "Passer",
+            "espy"
+        ],
+        "references": [
+            "https://www.activecountermeasures.com/free-tools/",
+            "https://securityonionsolutions.com/"
+        ]
+    },
+    {
+        "name": "Cyber Deception",
+        "type": "procedure",
+        "id": "037",
+        "description": "The attackers go after one of your deception technologies. This could be a Word Web Bug, Honey Account, or a full honeypot.",
+        "tools": [
+            "CanaryTokens",
+            "HoneyBadger",
+            "Active Defense Harbinger Distribution",
+            "MITRE Shield"
+        ],
+        "references": [
+            "https://shield.mitre.org/",
+            "https://www.activecountermeasures.com/free-tools/adhd/"
+        ]
+    },
+    {
+        "name": "Endpoint Security Protection Analysis",
+        "type": "procedure",
+        "id": "038",
+        "description": "We know, you have AV. Great! Do you actually get alerts and logs? Do you immediately review them? Or, do you simply turn it on and walk away while the network explodes like you're in a bad action movie?",
+        "tools": [
+            "Check with your vendor, they miss you and always want to chat."
+        ],
+        "references": [
+            "https://www.velocidex.com/",
+            "https://www.elastic.co/downloads/elastic-agent"
+        ]
+    },
+    {
+        "name": "User and Entity Behavior Analytics (UEBA)",
+        "type": "procedure",
+        "id": "039",
+        "description": "It's like logging, but it actually works. UEBA looks for multiple concurrent logins, impossible logins based on geography, unusual file access, password sprays, and more!",
+        "tools": [
+            "LogonTracer",
+            "DeepBlueCLI",
+            "OpenUBA"
+        ],
+        "references": [
+            "https://github.com/JPCERTCC/LogonTracer",
+            "https://openuba.org/"
+        ]
+    },
+    {
+        "name": "Endpoint Analysis",
+        "type": "procedure",
+        "id": "040",
+        "description": "This is where the Defenders use their SANS IR Cheat Sheets to detect attacks on workstations. Time to bring in the Help Desk... and pray.",
+        "tools": [
+            "DeepBlueCLI",
+            "Velociraptor",
+            "SANS IR Cheat Sheets"
+        ],
+        "references": [
+            "https://github.com/sans-blue-team/DeepBlueCLI",
+            "https://www.velocidex.com/"
+        ]
+    },
+    {
+        "name": "Isolation",
+        "type": "procedure",
+        "id": "041",
+        "description": "Your Network Team is on their game. They can easily isolate infected systems to prevent further harm.",
+        "tools": [
+            "Switch and Router Commands"
+        ],
+        "references": []
+    },
+    {
+        "name": "Crisis Management",
+        "type": "procedure",
+        "id": "042",
+        "description": "Your Legal and Management Teams have procedures for effectively and ethically notifying impacted victims of compromises.",
+        "tools": [
+            "This almost never happens. But, a good notification strategy will really help deal with the political fallout."
+        ],
+        "references": []
+    },
+    {
+        "name": "Memory Analysis",
+        "type": "procedure",
+        "id": "053",
+        "description": "Incident Response Team pulls the memory from the suspect system and reviews it for possible malicious activity.",
+        "tools": [
+            "Volatility, to review the memory",
+            "Velociraptor, to dump the memory"
+        ],
+        "references": [
+            "https://www.velocidex.com/",
+            "https://www.volatilityfoundation.org/"
+        ]
+    },
+    {
+        "name": "Honeypots Deployed",
+        "type": "inject",
+        "id": "044",
+        "description": "The Defenders had honeypots on their network. The Incident Master must reveal the Pivot and Escalate Card to the Defenders.",
+        "notes": "Check out the Active Defense Harbinger Distribution (ADHD), it has lots and lots of cool tools. Also, take a look at canarytokens.org.",
+        "references": [
+            "https://www.activecountermeasures.com/free-tools/adhd",
+            "https://canarytokens.org/generate"
+        ]
+    },
+    {
+        "name": "It was a Pentest",
+        "type": "inject",
+        "id": "045",
+        "description": "Ha! Ha! Just kidding, you were never attacked! The CEO hired an external firm (BHIS?) to run an unannounced Red Team.",
+        "notes": "This is almost always a bittersweet moment for companies. On the one hand, they are glad it wasn't the real thing. On the other... well, they were compromised. It's time to start working through how to prevent this from happening again.",
+        "references": [
+            "https://www.blackhillsinfosec.com"
+        ]
+    },
+    {
+        "name": "Data Uploaded to Pastebin",
+        "type": "inject",
+        "id": "046",
+        "description": "Bummer, the attackers have posted internal sensitive data on Pastebin. Your customers are now informed of the attack by the media.",
+        "notes": "It happens... a lot, but it's just pure evil. Time to bring in Upper Management and the Legal Team.",
+        "references": []
+    },
+    {
+        "name": "SIEM Analyst Returns from Splunk Training",
+        "type": "inject",
+        "id": "047",
+        "description": "(+2) Modifier for Log-Related Actions",
+        "notes": "Training is awesome. You need to get some.",
+        "references": []
+    },
+    {
+        "name": "Take One Procedure Card Away",
+        "type": "inject",
+        "id": "048",
+        "description": "What it says on the tin. Take a Procedure Card away from the Defenders. Hey, sometimes things don't work. Honestly, does this surprise you?",
+        "notes": "Sometimes procedures fail. Sometimes they're not followed correctly. Sometimes you can't find a procedure when you need it the most. Nobody's perfect. Sorry.",
+        "references": []
+    },
+    {
+        "name": "Give the Defenders a Random Procedure Card",
+        "type": "inject",
+        "id": "049",
+        "description": "For whatever reason, everyone forgot they had this procedure. It must be Monday.",
+        "notes": "Look, it happens all the time. We forget what we have. Different teams, different tools, different offices. It's nice when we all pull together as a team.",
+        "references": []
+    },
+    {
+        "name": "Lead Handler Has a Baby, Takes FMLA Leave",
+        "type": "inject",
+        "id": "050",
+        "description": "Yeah, there's always one person who pretty much runs the whole IR process. That one essential person. Well, now it's time for the Incident Master to silence that person.",
+        "notes": "We have to continue to be able to work effectively without the one or two most advanced people on the team. All of the quiet people who were just passively listening and hoping to not get called on now need to step up. Now is your time. Shine!",
+        "references": []
+    },
+    {
+        "name": "Bobby the Intern Kills the System You are Reviewing",
+        "type": "inject",
+        "id": "051",
+        "description": "This. Happens. Far. Too. Often.",
+        "notes": "No. Murder is never okay. Don't even think that.",
+        "references": []
+    },
+    {
+        "name": "Legal Takes Your Only Skills Handler Into a Meeting to Explain the Incident",
+        "type": "inject",
+        "id": "052",
+        "description": "Who brought a lawyer to the party? There's always one person who pretty much runs the whole IR process. That one essential person. Well, the legal team took that person away for 'Very Important Reasons.'",
+        "notes": "They may never come back... all of the quiet people who were just passively listening and hoping to not get called on now need to step up. Now is your time. Shine!",
+        "references": []
+    }
+]
